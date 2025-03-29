@@ -12,8 +12,8 @@
     - name: pull an image
       shell: docker pull darshangt.jfrog.io/jenkins-cicd-docker-cicd/app-a/{{ ms }}:{{ build_number }}
 
-    # - name: remove container
-    #   shell: docker rm -f devopsAppDeploy
+    - name: remove container
+      shell: docker rm -f devopsAppDeploy
         
     - name: create a application container
       shell: docker run -id --name devopsAppDeploy -p 9000:8080 darshangt.jfrog.io/jenkins-cicd-docker-cicd/app-a/{{ ms }}:{{ build_number }}
