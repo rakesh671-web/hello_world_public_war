@@ -9,7 +9,7 @@
       shell: docker login -u yourdevopsbro@gmail.com -p Darshangt@7 devopsbro.jfrog.io
     
     - name: pull an image
-      shell: docker pull devopsbro.jfrog.io/docker-docker-local/app-a/{{ build_number }}
+      shell: docker pull yourdevopsbro.jfrog.io/docker-docker-local/app-a/{{ build_number }}
 
     - name: remove container
       shell: docker rm -f devopsAppDeploy
