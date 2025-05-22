@@ -6,7 +6,7 @@
   tasks:
       
     - name: login to jfrog
-      shell: docker login -u yourdevopsbro@gmail.com -p Darshangt@7 devopsbro.jfrog.io
+      shell: docker login -u yourdevopsbro@gmail.com -p Darshangt@7 yourdevopsbro.jfrog.io
     
     - name: pull an image
       shell: docker pull yourdevopsbro.jfrog.io/docker-docker-local/app-a/{{ build_number }}
