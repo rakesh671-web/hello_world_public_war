@@ -6,15 +6,15 @@
   tasks:
       
     - name: login to jfrog
-      shell: docker login -u yourdevopsbro@gmail.com -p Darshangt@7 yourdevopsbro.jfrog.io
+      shell: docker login -u yourdevopsbro@gmail.com -p Darshangt@7 devopsbro.jfrog.io
     
     - name: pull an image
-      shell: docker pull yourdevopsbro.jfrog.io/docker-docker-local/app-a/{{ build_number }}
+      shell: docker pull devopsbro.jfrog.io/docker-docker-local/app-a/{{ build_number }}
 
     - name: remove container
       shell: docker rm -f devopsAppDeploy
         
     - name: create a application container
-      shell: docker run -id --name devopsAppDeploy -p 9090:8080 yourdevopsbro.jfrog.io/docker-docker-local/app-a/{{ build_number }}
+      shell: docker run -id --name devopsAppDeploy -p 9090:8080 devopsbro.jfrog.io/docker-docker-local/app-a/{{ build_number }}
  
    
